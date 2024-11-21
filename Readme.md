@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Тимур Сибгатов](https://up.htmlacademy.ru/adaptive-individual/2/user/2536587).
-* Наставник: `Неизвестно`.
+* Наставник:[Андрей Грачев](https://htmlacademy.ru/profile/angra).
 
 ---
 
