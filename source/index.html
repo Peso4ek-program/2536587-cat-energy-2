@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <title>Название проекта</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Подключение фавиконок -->
+  <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/icon-180.png"><!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
@@ -13,8 +18,12 @@
   <header class="main-header">
     <nav class="navigation">
       <a class="navigation__logo" href="index.html">
-        <img class="navigation__logo-image" src="/" alt="Логотип сайта Cat-energy" width="70" height="59">
-        <img class="navigation__logo-image" src="/" alt="Логотип сайта Cat-energy" width="118" height="21">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
+          <source media="(min-width:768px)" srcset="images/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
+          <img class="navigation__logo-image" src="images/logo-mobile.svg" alt="Логотип сайта Cat-energy" width="33" height="38">
+        </picture>
+        <img class="navigation__logo-image" src="images/logo-text.svg" alt="Логотип-слоган" width="101" height="18">
       </a>
       <div class="navigation__wrapper">
         <ul class="navigation__list">
@@ -30,7 +39,9 @@
       <h1 class="promo__title">Функциональное <br> питание для котов</h1>
       <p class="promo__description">Занялся собой? Займись котом!</p>
       <picture>
-        <img class="promo__image" src="/" alt="Полезная еда" width="280" height="270">
+        <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/index-images/index-desktop/promo-desktop@1x.png 1x,images/index-images/index-desktop/promo-desktop@2x.png 2x">
+        <source width="280" height="270" type="image/png" media="(min-width:768px)" srcset="images/index-images/index-tablet/promo-tablet@1x.png 1x, images/index-images/index-tablet/promo-tablet@2x.png 2x">
+        <img class="promo__image" src="images/index-images/index-mobile/promo-mobile@1x.png" srcset="images/index-images/index-mobile/promo-mobile@2x.png 2x" alt="Полезная еда" width="280" height="270">
       </picture>
       <a class="button" href="program.html">Подобрать программу</a>
     </section>
@@ -94,12 +105,16 @@
           <ul class="history__list slider__list">
             <li class="history__item slider__item">
               <picture>
-                <img class="history__item-image" src="/" alt="Фотография упитанного кота" width="280" height="256">
+                <source width="560" height="512" type="image/png" media="(min-width: 1440px)" srcset="images/index-images/index-desktop/cat-before-desktop@1x.png 1x,images/index-images/index-desktop/cat-before-desktop@2x.png 2x">
+                <source width="560" height="512" type="image/png" media="(min-width:768px)" srcset="images/index-images/index-tablet/cat-before-tablet@1x.png 1x, images/index-images/index-tablet/cat-before-tablet@2x.png 2x">
+                <img class="history__item-image" src="images/index-images/index-mobile/cat-before-mobile@1x.png" srcset="images/index-images/index-mobile/cat-before-mobile@2x.png 2x" alt="Фотография упитанного кота" width="280" height="256">
               </picture>
             </li>
             <li class="history__list slider__item">
               <picture>
-                <img class="history__item-image" src="/" alt="Фотография худого кота" width="280" height="256">
+                <source width="560" height="512" type="image/png" media="(min-width: 1440px)" srcset="images/index-images/index-desktop/cat-after-desktop@1x.png 1x,images/index-images/index-desktop/cat-after-desktop@2x.png 2x">
+                <source width="560" height="512" type="image/png" media="(min-width:768px)" srcset="images/index-images/index-tablet/cat-after-tablet@1x.png 1x, images/index-images/index-tablet/cat-after-tablet@2x.png 2x">
+                <img class="history__item-image" src="images/index-images/index-mobile/cat-after-mobile@1x.png" srcset="images/index-images/index-mobile/cat-after-mobile@2x.png 2x" alt="Фотография худого кота" width="280" height="256">
               </picture>
             </li>
           </ul>
@@ -120,24 +135,23 @@
     <section class="map">
       <h3 class="visually-hidden">Карта города Санкт-Петербург.</h3>
       <picture>
-        <img class="map-image" src="/" alt="Карта города Санкт-Перебург." width="320" height="250">
+        <source width="1440" height="400" type="image/png" media="(min-width: 1440px)" srcset="images/location-desktop@1x.png 1x,images/location-desktop@2x.png 2x">
+        <source width="768" height="400" type="image/png" media="(min-width:768px)" srcset="images/location-tablet@1x.png 1x, images/location-tablet@2x.png 2x">
+        <img class="map-image" src="images/location-mobile@1x.png" srcset="images/location-mobile@2x.png 2x" alt="Карта города Санкт-Перебург." width="320" height="362">
       </picture>
     </section>
   </main>
   <footer class="main-footer">
     <div class="main-footer__wrapper">
       <a class="main-footer__logo" href="index.html">
-        <img class="main-footer__logo-image" src="#" alt="Логотип сайта." width="128" height="24">
+        <img class="main-footer__logo-image" src="images/footer-logo.svg" alt="Логотип сайта." width="128" height="24">
       </a>
       <ul class="social">
         <li class="social__item"><a class="social__link social__link--vkontakte" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
         <li class="social__item"><a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Ютуб</span></a></li>
         <li class="social__item"><a class="social__link social__link--telegram" href="#"><span class="visually-hidden">Телеграмм</span></a></li>
       </ul>
-      <a class="main-footer__logo" href="https://htmlacademy.ru/intensive/adaptive">
-        <p class="main-footer__text">HTML Academy</p>
-        <img class="main-footer__logo-image" src="#" alt="Логотип сайта." width="27" height="34">
-      </a>
+      <a class="main-footer__logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML Academy</a>
     </div>
   </footer>
 </body>
