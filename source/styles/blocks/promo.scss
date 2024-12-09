@@ -1,0 +1,19 @@
+@use "../common/fonts.scss" ;
+@use "../common/variables.scss" ;
+
+
+.promo__title {
+  font-family: $additional-font;
+  font-weight: $font-weight;
+  font-size: 60px;
+  line-height: 60px;
+  color: $optional-color;
+}
+
+.promo__description {
+  font-family: $additional-font;
+  font-weight: $font-weight;
+  font-size: 20px;
+  line-height: 20px;
+  color: $optional-color;
+}

@@ -1,0 +1,44 @@
+@use "../common/fonts.scss" ;
+@use "../common/variables.scss" ;
+
+.history__title {
+  font-family: $additional-font;
+  font-weight: $font-weight;
+  font-size: 60px;
+  line-height: 60px;
+  color: $optional-color;
+}
+
+.history__intro {
+  font-family: $primary-font;
+  font-weight: $font-weight;
+  font-size: $base-font-size-text-desctop;
+  line-height: 24px;
+  color: $base-color-text;
+}
+
+.history__number {
+  font-family: $additional-font;
+  font-weight: $font-weight;
+  font-size: 30px;
+  line-height: 37px;
+  color: $optional-color;
+  text-transform: $text-transform;
+}
+
+.history__description {
+  font-family: $primary-font;
+  font-weight: $font-weight;
+  font-size: $base-font-size-text;
+  line-height: 14px;
+  color: $base-color-text;
+}
+
+.history__cost {
+  font-family: $additional-font;
+  font-weight: $font-weight;
+  font-size: 20px;
+  line-height: 20px;
+  color: $optional-color;
+  text-transform: $text-transform;
+}

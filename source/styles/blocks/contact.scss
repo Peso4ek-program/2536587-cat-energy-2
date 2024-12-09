@@ -1,0 +1,19 @@
+@use "../common/fonts.scss" ;
+@use "../common/variables.scss" ;
+
+.contact__title {
+  font-family: $additional-font;
+  font-weight: $font-weight;
+  font-size: 20px;
+  line-height: 26px;
+  color: #111111;
+  text-transform: $text-transform;
+}
+
+.contact__address {
+  font-family: $primary-font;
+  font-weight: $font-weight;
+  font-size: $base-font-size-text-desctop;
+  line-height: 20px;
+  color: $base-color-text;
+}

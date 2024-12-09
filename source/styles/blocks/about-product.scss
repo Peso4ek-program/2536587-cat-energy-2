@@ -1,0 +1,18 @@
+@use "../common/fonts.scss" ;
+@use "../common/variables.scss" ;
+
+.about-product__title {
+  font-family: $additional-font;
+  font-weight: $font-weight;
+  font-size: 60px;
+  line-height: 60px;
+  color: $optional-color;
+}
+
+.about-product__item {
+  font-family: $primary-font;
+  font-weight: $font-weight;
+  font-size: $base-font-size-text-desctop;
+  line-height: 24px;
+  color: $base-color-text;
+}

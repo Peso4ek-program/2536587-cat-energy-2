@@ -1,0 +1,21 @@
+@use "../common/fonts.scss" ;
+@use "../common/variables.scss" ;
+
+
+.navigation__wrapper {
+  //
+}
+
+.navigation__list {
+  //
+}
+
+.navigation__link {
+  text-decoration: none;
+  font-family: $additional-font;
+  font-weight: $font-weight;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: $text-transform;
+  color: $additional-color;
+}

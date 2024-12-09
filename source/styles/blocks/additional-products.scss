@@ -1,0 +1,34 @@
+@use "../common/fonts.scss" ;
+@use "../common/variables.scss" ;
+
+.additional-products__title {
+  font-family: $additional-font;
+  font-weight: $font-weight;
+  font-size: 40px;
+  line-height: 40px;
+  color: $optional-color;
+}
+
+.additional-products__item-title {
+  font-family: $additional-font;
+  font-weight: $font-weight;
+  font-size: 20px;
+  line-height: 20px;
+  color: $ad-special_dark-grey;
+}
+
+.additional-products__item-description {
+  font-family: $primary-font;
+  font-weight: $font-weight;
+  font-size: $base-font-size-text-desctop;
+  line-height: 20px;
+  color: $base-color-text;
+}
+
+.additional-products__item-rpice {
+  font-family: $primary-font;
+  font-weight: $font-weight;
+  font-size: $base-font-size-text-desctop;
+  line-height: 20px;
+  color: $base-color-text;
+}

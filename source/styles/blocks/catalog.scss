@@ -1,0 +1,39 @@
+@use "../common/fonts.scss" ;
+@use "../common/variables.scss" ;
+
+.catalog__title {
+  font-family: $additional-font;
+  font-weight: $font-weight;
+  font-size: 60px;
+  line-height: 60px;
+  color: $optional-color;
+}
+
+.catalog__item-link {
+  text-decoration: none;
+}
+
+.catalog__item-title {
+  font-family: $additional-font;
+  font-weight: $font-weight;
+  font-size: 20px;
+  line-height: 24px;
+  color: $ad-special_dark-grey;
+}
+
+.catalog__info-title {
+  font-family: $primary-font;
+  font-weight: $font-weight;
+  font-size: $base-font-size-text-desctop;
+  line-height: 20px;
+  color: $base-color-text;
+  text-transform: $text-transform;
+}
+
+.catalog__info-description {
+  font-family: $primary-font;
+  font-weight: $font-weight;
+  font-size: $base-font-size-text-desctop;
+  line-height: 20px;
+  color: $base-color-text;
+}

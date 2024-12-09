@@ -1,0 +1,18 @@
+@use "../common/fonts.scss" ;
+@use "../common/variables.scss" ;
+
+.page__body {
+  font-family: $primary-font;
+  color: $base-color-text;
+  font-size: $base-font-size-text;
+  line-height: $base-line-height;
+  font-weight: $font-weight;
+}
+
+.page__header {
+  font-family: $additional-font;
+  font-weight: $font-weight;
+  font-size: 36px;
+  line-height: 36px;
+  color: $optional-color;
+}

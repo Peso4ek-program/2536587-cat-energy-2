@@ -1,0 +1,20 @@
+@use "../common/fonts.scss" ;
+@use "../common/variables.scss" ;
+
+.feature__title {
+  font-family: $additional-font;
+  font-weight: $font-weight;
+  font-size: 36px;
+  line-height: 36px;
+  color: $optional-color;
+  text-transform: $text-transform;
+}
+
+
+.feature__description {
+  font-family: $primary-font;
+  font-weight: $font-weight;
+  font-size: $base-font-size-text-desctop;
+  line-height: 24px;
+  color: $optional-color;
+}

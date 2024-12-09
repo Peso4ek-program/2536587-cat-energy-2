@@ -1,0 +1,11 @@
+@use "../common/fonts.scss" ;
+@use "../common/variables.scss" ;
+
+.main-footer__logo {
+  font-family: $primary-font;
+  font-weight: $font-weight;
+  font-size: $base-font-size-text-desctop;
+  line-height: 20px;
+  color: $base-color-text;
+  text-decoration: none;
+}

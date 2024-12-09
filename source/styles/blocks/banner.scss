@@ -1,0 +1,10 @@
+@use "../common/fonts.scss" ;
+@use "../common/variables.scss" ;
+
+.banner__title {
+  font-family: $primary-font;
+  font-weight: $font-weight;
+  font-size: $base-font-size-text-desctop;
+  line-height: 20px;
+  color: $additional-color;
+}
