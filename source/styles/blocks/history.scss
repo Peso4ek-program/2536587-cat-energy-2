@@ -4,34 +4,54 @@
 .history__title {
   font-family: $additional-font;
   font-weight: $font-weight;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 36px;
+  line-height: 40px;
   color: $optional-color;
+
+  @media (min-width: 768px) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .history__intro {
   font-family: $primary-font;
   font-weight: $font-weight;
-  font-size: $base-font-size-text-desctop;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 18px;
   color: $base-color-text;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .history__number {
   font-family: $additional-font;
   font-weight: $font-weight;
-  font-size: 30px;
-  line-height: 37px;
+  font-size: 24px;
+  line-height: 24px;
   color: $optional-color;
   text-transform: $text-transform;
+
+  @media (min-width: 768px) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .history__description {
   font-family: $primary-font;
   font-weight: $font-weight;
-  font-size: $base-font-size-text;
-  line-height: 14px;
+  font-size: 12px;
+  line-height: 12px;
   color: $base-color-text;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .history__cost {

@@ -1,11 +1,46 @@
 @use "../common/fonts.scss" ;
 @use "../common/variables.scss" ;
 
-.main-footer__logo {
-  font-family: $primary-font;
-  font-weight: $font-weight;
-  font-size: $base-font-size-text-desctop;
+
+.main-footer__text {
+  font-size: 16px;
   line-height: 20px;
   color: $base-color-text;
+}
+
+.main-footer__logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    opacity: 0.8;
+    outline-color: $bg-color-green;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-footer__logo-copyright {
   text-decoration: none;
+
+  fill: #666666;
+
+  &:focus-visible {
+    outline-color: $bg-color-green;
+  }
+
+  &:hover svg {
+    fill: $bg-color-green;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+
+  &:active p {
+    opacity: 0.3;
+  }
 }

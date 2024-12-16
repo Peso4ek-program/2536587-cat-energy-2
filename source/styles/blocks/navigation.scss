@@ -1,21 +1,71 @@
 @use "../common/fonts.scss" ;
 @use "../common/variables.scss" ;
 
-
-.navigation__wrapper {
-  //
-}
-
-.navigation__list {
-  //
-}
-
-.navigation__link {
+.navigation {
   text-decoration: none;
   font-family: $additional-font;
   font-weight: $font-weight;
   font-size: 20px;
   line-height: 30px;
   text-transform: $text-transform;
-  color: $additional-color;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+
+.navigation__logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline-color: $bg-color-green;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+picture {
+  font-size: 0;
+}
+
+.navigation__item {
+  @media (min-width: 768px) {
+    &--current {
+      border-bottom: 2px solid $bg-color-green;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &--current {
+      border-color: #ffffff;
+    }
+  }
+}
+
+.navigation__link {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline-color: $bg-color-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: 1440px) {
+    color: $additional-color;
+    font-size: 20px;
+  }
 }

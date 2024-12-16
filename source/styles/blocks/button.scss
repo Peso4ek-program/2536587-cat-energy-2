@@ -1,2 +1,26 @@
 @use "../common/fonts.scss" ;
 @use "../common/variables.scss" ;
+
+.button {
+  font-family: $additional-font;
+  font-weight: $font-weight;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: $text-transform;
+  background-color: $bg-color-green;
+  text-decoration: none;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  &--background-color {
+    background-color: #f2f2f2;
+  }
+
+  &--text-color {
+    color: $base-color-text;
+  }
+}

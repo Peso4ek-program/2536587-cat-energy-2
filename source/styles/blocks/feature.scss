@@ -2,19 +2,81 @@
 @use "../common/variables.scss" ;
 
 .feature__title {
+  position: relative;
   font-family: $additional-font;
   font-weight: $font-weight;
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 37px;
   color: $optional-color;
   text-transform: $text-transform;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: $bg-color-green;
+    border-radius: 100%;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+  }
+
+  &--slim-icon::after {
+    top: -3px;
+    left: 7px;
+    width: 36px;
+    height: 50px;
+    background-image: url("../../icons/stack.svg#cat-slim");
+  }
+
+  &--pro-icon::after {
+    top: 10px;
+    left: -10px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../../icons/stack.svg#cat-pro");
+  }
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 
 .feature__description {
-  font-family: $primary-font;
+  font-family: $additional-font;
   font-weight: $font-weight;
-  font-size: $base-font-size-text-desctop;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 18px;
+  color: $base-color-text;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+    color: $optional-color;
+  }
+}
+
+.feature__link {
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $additional-font;
+  text-transform: $text-transform;
   color: $optional-color;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    margin-left: 15px;
+    width: 32px;
+    height: 10px;
+    mask-image: url("../../icons/icon_arrow.svg");
+    mask-repeat: no-repeat;
+    background-color: $optional-color;
+  }
 }

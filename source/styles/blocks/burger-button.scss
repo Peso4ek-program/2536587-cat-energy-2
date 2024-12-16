@@ -1,0 +1,20 @@
+@use "../common/fonts.scss" ;
+@use "../common/variables.scss" ;
+
+.burger-button {
+  background-color: #ffffff;
+  background-image: url("../../icons/stack.svg#burger-menu");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  border: none;
+  margin-left: 58px;
+
+  &--close {
+    background-image: url("../../icons/stack.svg#close-menu");
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}

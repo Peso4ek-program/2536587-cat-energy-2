@@ -4,15 +4,67 @@
 .about-product__title {
   font-family: $additional-font;
   font-weight: $font-weight;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 36px;
+  line-height: 40px;
   color: $optional-color;
+
+  @media (min-width: 768px) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .about-product__item {
   font-family: $primary-font;
   font-weight: $font-weight;
-  font-size: $base-font-size-text-desctop;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 18px;
   color: $base-color-text;
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: $bg-color-green;
+  }
+
+  &--leaf::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 25px 28px;
+    background-image: url("../../icons/stack.svg#leaf-icon");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  &--water::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 25px 28px;
+    background-image: url("../../icons/stack.svg#powder-icon");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  &--cutlery::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 25px 28px;
+    background-image: url("../../icons/stack.svg#eat-icon");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  &--time::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 25px 28px;
+    background-image: url("../../icons/stack.svg#time-icon");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
 }

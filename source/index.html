@@ -32,8 +32,10 @@
           <li class="navigation__item "><a class="navigation__link" href="index.html">Подбор программы</a></li>
         </ul>
       </div>
-      <button class="navigation__menu-button" type="button">
-        <span class="visually-hidden">Открыть меню</span></button>
+      <div class="button-wrapper">
+        <button class="burger-button burger-button--close" type="button">
+          <span class="visually-hidden">Открыть меню</span></button>
+      </div>
     </nav>
     <section class="promo">
       <h1 class="promo__title">Функциональное <br> питание для котов</h1>
@@ -51,14 +53,14 @@
       <h2 class="visually-hidden">Наши програмым.</h2>
       <div class="programs__wrapper">
         <article class="feature">
-          <h3 class="feature__title">Похудение</h3>
+          <h3 class="feature__title feature__title--slim-icon">Похудение</h3>
           <p class="feature__description">Ваш кот весит больше собаки и почти утратил способность
             лазить по деревьям? Пора на диету! Cat Energy Slim поможет
             вашему питомцу сбросить лишний вес.</p>
           <a class="feature__link" href="catalog-slim.html">Каталог Slim</a>
         </article>
         <article class="feature">
-          <h3 class="feature__title">набор массы</h3>
+          <h3 class="feature__title feature__title--pro-icon">набор массы</h3>
           <p class="feature__description">Заработать авторитет среди дворовых котов и даже собак?
             Серия Cat Energy Pro поможет вашему коту нарастить
             необходимые мышцы!</p>
@@ -101,25 +103,25 @@
           </div>
         </dl>
         <p class="history__cost">Затраты на питание&#58; 15 000 руб.</p>
-        <div class="history__list-wrapper slider">
-          <ul class="history__list slider__list">
-            <li class="history__item slider__item">
+        <div class=" slider">
+          <ul class=" slider__list">
+            <li class=" slider__item">
               <picture>
                 <source width="560" height="512" type="image/png" media="(min-width: 1440px)" srcset="images/index-images/index-desktop/cat-before-desktop@1x.png 1x,images/index-images/index-desktop/cat-before-desktop@2x.png 2x">
                 <source width="560" height="512" type="image/png" media="(min-width:768px)" srcset="images/index-images/index-tablet/cat-before-tablet@1x.png 1x, images/index-images/index-tablet/cat-before-tablet@2x.png 2x">
-                <img class="history__item-image" src="images/index-images/index-mobile/cat-before-mobile@1x.png" srcset="images/index-images/index-mobile/cat-before-mobile@2x.png 2x" alt="Фотография упитанного кота" width="280" height="256">
+                <img class="slider__item-image" src="images/index-images/index-mobile/cat-before-mobile@1x.png" srcset="images/index-images/index-mobile/cat-before-mobile@2x.png 2x" alt="Фотография упитанного кота" width="280" height="256">
               </picture>
             </li>
-            <li class="history__list slider__item">
+            <li class=" slider__item">
               <picture>
                 <source width="560" height="512" type="image/png" media="(min-width: 1440px)" srcset="images/index-images/index-desktop/cat-after-desktop@1x.png 1x,images/index-images/index-desktop/cat-after-desktop@2x.png 2x">
                 <source width="560" height="512" type="image/png" media="(min-width:768px)" srcset="images/index-images/index-tablet/cat-after-tablet@1x.png 1x, images/index-images/index-tablet/cat-after-tablet@2x.png 2x">
-                <img class="history__item-image" src="images/index-images/index-mobile/cat-after-mobile@1x.png" srcset="images/index-images/index-mobile/cat-after-mobile@2x.png 2x" alt="Фотография худого кота" width="280" height="256">
+                <img class="slider__item-image" src="images/index-images/index-mobile/cat-after-mobile@1x.png" srcset="images/index-images/index-mobile/cat-after-mobile@2x.png 2x" alt="Фотография худого кота" width="280" height="256">
               </picture>
             </li>
           </ul>
-          <div class="history__bar">
-            <button class="history__button" type="button">
+          <div class="slider__bar">
+            <button class="slider__button" type="button">
               <span class="visually-hidden">Кнопка слайдера</span>
             </button>
           </div>
@@ -151,7 +153,12 @@
         <li class="social__item"><a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Ютуб</span></a></li>
         <li class="social__item"><a class="social__link social__link--telegram" href="#"><span class="visually-hidden">Телеграмм</span></a></li>
       </ul>
-      <a class="main-footer__logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML Academy</a>
+      <a class="main-footer__logo-copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
+        <p class="main-footer__text">HTML Academy</p>
+        <svg width="27" height="34">
+          <use href="icons/logo-htmlacademy.svg"></use>
+        </svg>
+      </a>
     </div>
   </footer>
 </body>
