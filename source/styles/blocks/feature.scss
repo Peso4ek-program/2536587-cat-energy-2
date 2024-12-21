@@ -1,7 +1,31 @@
 @use "../common/fonts.scss" ;
 @use "../common/variables.scss" ;
 
+.feature-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 82px 110px 71px 80px;
+    max-width: 570px;
+  }
+}
+
+
 .feature__title {
+  display: flex;
+  margin: 0;
+  margin-left: 71px;
+  margin-bottom: 29px;
   position: relative;
   font-family: $additional-font;
   font-weight: $font-weight;
@@ -40,24 +64,43 @@
     background-image: url("../../icons/stack.svg#cat-pro");
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    margin-bottom: 24px;
     font-size: 36px;
     line-height: 36px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 73px;
+  }
 }
 
-
 .feature__description {
+  margin: 0;
+  margin-bottom: 15px;
+  padding-right: 13px;
+  padding-bottom: 23px;
   font-family: $additional-font;
   font-weight: $font-weight;
   font-size: 14px;
   line-height: 18px;
   color: $base-color-text;
+  border-bottom: 1px solid #d9d9d9;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
     color: $optional-color;
+    padding-right: 0;
+    padding-bottom: 48px;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 457px;
+    padding-bottom: 23px;
+    margin: 0;
   }
 }
 
@@ -68,6 +111,7 @@
   font-family: $additional-font;
   text-transform: $text-transform;
   color: $optional-color;
+  text-decoration: none;
 
   &::after {
     content: "";

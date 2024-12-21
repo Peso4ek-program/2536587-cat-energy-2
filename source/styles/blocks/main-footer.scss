@@ -1,14 +1,43 @@
 @use "../common/fonts.scss" ;
 @use "../common/variables.scss" ;
 
+.main-footer {
+  padding: 40px 0;
+  background-color: #f2f2f2;
+
+  @media (min-width: $tablet-width) {
+    padding: 55px 30px;
+  }
+}
+
+.main-footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 
 .main-footer__text {
+  margin: 0;
+  margin-right: auto;
   font-size: 16px;
   line-height: 20px;
   color: $base-color-text;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 23px;
+  }
 }
 
 .main-footer__logo {
+  justify-self: center;
+  padding-bottom: 20px;
+
   &:hover {
     opacity: 0.8;
   }
@@ -21,9 +50,34 @@
   &:active {
     opacity: 0.6;
   }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 0;
+    grid-column: 1/2;
+    place-self: center left;
+  }
+}
+
+.social {
+  padding: 20px 94px;
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  gap: 24px;
+  justify-self: center;
+  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
 }
 
 .main-footer__logo-copyright {
+  display: flex;
+  justify-self: center;
+  padding: 20px 0 40px;
+  align-items: center;
   text-decoration: none;
 
   fill: #666666;
@@ -42,5 +96,12 @@
 
   &:active p {
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    min-width: auto;
+    grid-column: 3/4;
+    justify-self: flex-end;
   }
 }

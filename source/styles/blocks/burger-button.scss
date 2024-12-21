@@ -3,7 +3,7 @@
 
 .burger-button {
   background-color: #ffffff;
-  background-image: url("../../icons/stack.svg#burger-menu");
+  background-image: url("../../icons/stack.svg#burger-menu.svg");
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
@@ -11,10 +11,10 @@
   margin-left: 58px;
 
   &--close {
-    background-image: url("../../icons/stack.svg#close-menu");
+    background-image: url("../../icons/stack.svg#close-menu.svg");
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }

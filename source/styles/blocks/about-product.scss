@@ -1,28 +1,72 @@
 @use "../common/fonts.scss" ;
 @use "../common/variables.scss" ;
 
+.about-product {
+  padding-top: 20px;
+  padding-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 47px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 70px 110px;
+    min-width: 1440px;
+    border-bottom: none;
+  }
+}
+
 .about-product__title {
   font-family: $additional-font;
   font-weight: $font-weight;
   font-size: 36px;
   line-height: 40px;
   color: $optional-color;
+  margin: 0;
+  margin-bottom: 40px;
+  padding-left: 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
     font-size: 60px;
     line-height: 60px;
   }
 }
 
+.about-product__list {
+  margin: 0;
+  list-style-type: none;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 246px);
+    gap: 37px 153px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 230px);
+    gap: 70px;
+    padding: 0;
+  }
+}
+
 .about-product__item {
+  position: relative;
   font-family: $primary-font;
   font-weight: $font-weight;
   font-size: 14px;
   line-height: 18px;
   color: $base-color-text;
+  margin-bottom: 20px;
+  min-height: 60px;
 
   &::before {
     content: "";
+    position: absolute;
     width: 60px;
     height: 60px;
     background-color: $bg-color-green;
@@ -66,5 +110,36 @@
     background-image: url("../../icons/stack.svg#time-icon");
     background-position: 50% 50%;
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    margin-bottom: 0;
+    padding: 35px 0;
+    font-size: 16px;
+    line-height: 24px;
+    width: 230px;
+
+    &:nth-child(even) {
+      grid-column: 2/3;
+    }
+
+    &::before {
+      position: static;
+      display: block;
+      margin-bottom: 31px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: auto;
+    width: 250px;
+    padding: 0;
+
+    &:nth-child(even) {
+      grid-column: auto;
+    }
   }
 }

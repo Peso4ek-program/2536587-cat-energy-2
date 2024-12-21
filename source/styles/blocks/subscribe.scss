@@ -1,18 +1,25 @@
 @use "../common/fonts.scss" ;
 @use "../common/variables.scss" ;
 
+.subscribe {
+  padding-top: 40px;
+}
+
 .subscribe__title {
   font-family: $additional-font;
   font-weight: $font-weight;
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 24px;
+  line-height: 24px;
   color: $optional-color;
+  padding-bottom: 32px;
 }
 
 .subscribe__description {
   font-family: $additional-font;
   font-weight: $font-weight;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 24px;
   color: $optional-color;
+  padding: 0 20px;
+  padding-bottom: 24px;
 }

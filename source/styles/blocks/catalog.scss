@@ -1,12 +1,41 @@
 @use "../common/fonts.scss" ;
 @use "../common/variables.scss" ;
 
+.catalog {
+  padding-top: 27px;
+}
+
 .catalog__title {
   font-family: $additional-font;
   font-weight: $font-weight;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 36px;
+  line-height: 36px;
   color: $optional-color;
+  margin: 0;
+  padding-bottom: 41px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.catalog__item {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: repeat(3, auto);
+  padding-top: 20px;
+  padding-bottom: 25px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.catalog__image-link {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  place-self: center center;
+}
+
+.catalog__title-link {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  text-decoration: none;
 }
 
 .catalog__item-link {
@@ -16,16 +45,24 @@
 .catalog__item-title {
   font-family: $additional-font;
   font-weight: $font-weight;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 20px;
   color: $ad-special_dark-grey;
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.catalog__info {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .catalog__info-title {
   font-family: $primary-font;
   font-weight: $font-weight;
-  font-size: $base-font-size-text-desctop;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 16px;
   color: $base-color-text;
   text-transform: $text-transform;
 }
@@ -33,7 +70,54 @@
 .catalog__info-description {
   font-family: $primary-font;
   font-weight: $font-weight;
-  font-size: $base-font-size-text-desctop;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 16px;
   color: $base-color-text;
+  margin-left: 0;
+  justify-self: end;
+}
+
+.catalog__button {
+  grid-column: 1/-1;
+  margin-top: 17px;
+  padding: 10px 109px;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:focus-visible {
+    outline-color: $bg-color-green;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.catalog__item-show-more-title {
+  grid-column: 1/-1;
+  justify-self: center;
+  margin-bottom: 8px;
+
+  &::before {
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 23px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../icons/plus-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.catalog__item-subtitle {
+  grid-column: 1/-1;
+  justify-self: center;
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 16px;
 }

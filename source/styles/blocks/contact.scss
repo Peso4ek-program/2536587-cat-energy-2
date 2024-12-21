@@ -1,6 +1,13 @@
 @use "../common/fonts.scss" ;
 @use "../common/variables.scss" ;
 
+.contact__wrapper {
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+  }
+}
 
 .contact__title {
   font-family: $additional-font;
@@ -9,10 +16,12 @@
   line-height: 20px;
   color: #111111;
   text-transform: $text-transform;
+  padding: 26px 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 26px;
+    padding: 61px 70px;
   }
 }
 
@@ -23,9 +32,11 @@
   line-height: 20px;
   color: $base-color-text;
   font-style: normal;
+  padding: 26px 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    padding: 61px 70px;
   }
 }
