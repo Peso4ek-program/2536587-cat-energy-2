@@ -1,20 +1,33 @@
 @use "../common/fonts.scss" ;
 @use "../common/variables.scss" ;
 
-.banner {
-  padding: 100px;
-  background-color: rgba(104, 183, 56, 0.85);
-  background-image: url("../../images/catalog-images/catalog-desktop/catalog-background-desktop@2x.jpg");
+
+.banner__wrapper {
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, #ffffff 0%), url("../../images/catalog-images/catalog-desktop/catalog-background-desktop@2x.jpg");
   background-repeat: no-repeat;
+  background-position: 90%;
+  background-size: contain;
+  margin-top: 35px;
+  min-height: 290px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 70px;
+    background-position: 60%;
+    background-size: cover;
+  }
 }
 
 .banner__title {
   position: relative;
   font-family: $primary-font;
   font-weight: $font-weight;
-  font-size: $base-font-size-text-desctop;
+  color: #ffffff;
+  text-align: center;
+  width: 161px;
+  min-height: 60px;
+  font-size: 16px;
   line-height: 20px;
-  color: $additional-color;
+  margin: 0 auto;
 
   &::before {
     content: "";
@@ -24,5 +37,11 @@
     background-color: #ffffff;
     mask-image: url("../../icons/stack.svg#gift-icon");
     mask-repeat: no-repeat;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
   }
 }

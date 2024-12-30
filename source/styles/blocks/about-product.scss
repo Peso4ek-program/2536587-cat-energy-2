@@ -2,18 +2,16 @@
 @use "../common/variables.scss" ;
 
 .about-product {
-  padding-top: 20px;
-  padding-bottom: 49px;
+  margin-top: 20px;
+
 
   @media (min-width: $tablet-width) {
-    padding-top: 45px;
-    padding-bottom: 47px;
+    margin-top: 45px;
     border-bottom: 1px solid #e6e6e6;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 70px 110px;
-    min-width: 1440px;
+    margin-top: 70px;
     border-bottom: none;
   }
 }
@@ -26,7 +24,6 @@
   color: $optional-color;
   margin: 0;
   margin-bottom: 40px;
-  padding-left: 20px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 32px;
@@ -38,58 +35,61 @@
 .about-product__list {
   margin: 0;
   list-style-type: none;
-  padding: 0 20px;
 
   @media (min-width: $tablet-width) {
+    margin: 0;
     display: grid;
-    grid-template-columns: repeat(2, 246px);
-    gap: 37px 153px;
-    padding: 0 30px;
+    grid-template-columns: repeat(2, 250px);
+    gap: 135px 135px;
+    width: 708px;
+    counter-reset: number 0;
+    margin-bottom: 94px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(4, 230px);
-    gap: 70px;
-    padding: 0;
+    display: flex;
+    column-gap: 77px;
   }
 }
 
 .about-product__item {
   position: relative;
-  font-family: $primary-font;
-  font-weight: $font-weight;
-  font-size: 14px;
-  line-height: 18px;
-  color: $base-color-text;
   margin-bottom: 20px;
-  min-height: 60px;
+  display: flex;
+  flex-wrap: wrap;
 
   &::before {
     content: "";
-    position: absolute;
+    display: block;
+    background-color: $bg-color-green;
     width: 60px;
     height: 60px;
-    background-color: $bg-color-green;
   }
 
   &--leaf::before {
     content: "";
-    display: inline-block;
-    vertical-align: middle;
-    background-size: 25px 28px;
-    background-image: url("../../icons/stack.svg#leaf-icon");
-    background-position: 50% 50%;
+    background-size: 30px 32px;
     background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../icons/stack.svg#leaf-icon");
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--water::before {
     content: "";
-    display: inline-block;
-    vertical-align: middle;
-    background-size: 25px 28px;
     background-image: url("../../icons/stack.svg#powder-icon");
-    background-position: 50% 50%;
+    background-size: 26px 29px;
     background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--cutlery::before {
@@ -100,6 +100,11 @@
     background-image: url("../../icons/stack.svg#eat-icon");
     background-position: 50% 50%;
     background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--time::before {
@@ -110,36 +115,50 @@
     background-image: url("../../icons/stack.svg#time-icon");
     background-position: 50% 50%;
     background-repeat: no-repeat;
-  }
 
-  @media (min-width: $tablet-width) {
-    grid-column: 1/2;
-    margin-bottom: 0;
-    padding: 35px 0;
-    font-size: 16px;
-    line-height: 24px;
-    width: 230px;
-
-    &:nth-child(even) {
-      grid-column: 2/3;
-    }
-
-    &::before {
-      position: static;
-      display: block;
-      margin-bottom: 31px;
+    @media (min-width: $tablet-width) {
       width: 80px;
       height: 80px;
     }
   }
 
-  @media (min-width: $desktop-width) {
-    grid-column: auto;
-    width: 250px;
-    padding: 0;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    display: block;
+    counter-increment: number;
 
-    &:nth-child(even) {
-      grid-column: auto;
+
+    &::after {
+      content: counter(number);
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      position: absolute;
+      font-family: $additional-font;
+      font-weight: $font-weight;
+      z-index: -1;
+      top: -42px;
+      right: 0;
+      display: block;
+      width: 136px;
     }
+  }
+}
+
+.about-product__description {
+  font-family: $primary-font;
+  font-weight: $font-weight;
+  font-size: 14px;
+  line-height: 18px;
+  color: $base-color-text;
+  width: 200px;
+  margin-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    margin-top: 31px;
+    font-size: 16px;
+    line-height: 24px;
+    width: 245px;
   }
 }

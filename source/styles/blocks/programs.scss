@@ -1,2 +1,14 @@
 @use "../common/fonts.scss" ;
 @use "../common/variables.scss" ;
+
+.programs {
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 82px;
+  }
+}

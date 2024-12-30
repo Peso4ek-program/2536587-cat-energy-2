@@ -2,7 +2,11 @@
 @use "../common/variables.scss" ;
 
 .subscribe {
-  padding-top: 40px;
+  margin-top: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 80px;
+  }
 }
 
 .subscribe__title {
@@ -11,7 +15,13 @@
   font-size: 24px;
   line-height: 24px;
   color: $optional-color;
-  padding-bottom: 32px;
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 66px;
+  }
 }
 
 .subscribe__description {
@@ -20,6 +30,36 @@
   font-size: 16px;
   line-height: 24px;
   color: $optional-color;
-  padding: 0 20px;
-  padding-bottom: 24px;
+  margin-bottom: 24px;
+
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+  }
+}
+
+.subscribe__form {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    max-height: 56px;
+  }
+}
+
+.subscribe__field {
+  font-size: 20px;
+  line-height: 30px;
+  font-family: $additional-font;
+  padding: 13px;
+  color: #444444;
+  border: 1px solid #cdcdcd;
+  margin-bottom: 16px;
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 376px;
+    max-height: 56px;
+    margin-bottom: 0;
+  }
 }

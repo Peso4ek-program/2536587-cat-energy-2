@@ -7,11 +7,11 @@
 /* BLOCKS */
 @import "./blocks/page.scss";
 @import "./blocks/button.scss";
+@import "./blocks/wrapper.scss";
 @import "./blocks/logo-image.scss";
-@import "./blocks/button-wrapper.scss";
-@import "./blocks/burger-button.scss";
 @import "./blocks/main-header.scss";
 @import "./blocks/navigation.scss";
+@import "./blocks/site-list.scss";
 @import "./blocks/promo.scss";
 @import "./blocks/main-container.scss";
 @import "./blocks/programs.scss";
@@ -24,10 +24,8 @@
 @import "./blocks/main-footer.scss";
 @import "./blocks/social.scss";
 @import "./blocks/footer-logo.scss";
-
 // Catalog
 @import "./blocks/catalog.scss";
 @import "./blocks/additional-products.scss";
 @import "./blocks/banner.scss";
 @import "./blocks/subscribe.scss";
-
