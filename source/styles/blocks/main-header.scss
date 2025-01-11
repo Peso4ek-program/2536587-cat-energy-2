@@ -7,13 +7,3 @@
   flex-direction: column;
 }
 
-.main-header__logo {
-  display: flex;
-  flex-wrap: wrap;
-  flex-shrink: 0;
-  align-items: center;
-
-  @media (min-width: $tablet-width) {
-    margin-right: 84px;
-  }
-}

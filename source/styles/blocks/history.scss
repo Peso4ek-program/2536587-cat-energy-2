@@ -40,6 +40,7 @@
   color: $optional-color;
   margin: 0;
   margin-bottom: 40px;
+  padding-top: 25px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1/-1;

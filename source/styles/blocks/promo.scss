@@ -5,19 +5,18 @@
 .promo {
   text-align: center;
   font-family: $additional-font;
-  font-weight: $font-weight;
   line-height: 36px;
   color: $additional-color;
   background-size: cover;
   background-position: 50%;
   background-image: linear-gradient(rgba(104, 183, 56, 0.85) 60%, #ffffff 40%), url("../../images/index-images/index-mobile/background-mobile@2x.jpg");
   background-repeat: no-repeat;
-  margin-top: 27px;
+  padding-top: 27px;
 
   @media (min-width: $tablet-width) {
     background-image: none;
-    margin-top: 65px;
     text-align: left;
+    display: grid;
   }
 
   @media (min-width: $desktop-width) {
@@ -26,9 +25,23 @@
   }
 }
 
+.promo__container {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-rows: auto min-content 1fr;
+    padding: 38px 120px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 160px 70px 1fr;
+    padding-top: 55px;
+    padding-left: 80px;
+  }
+}
+
 .promo__title {
   font-size: 36px;
-  margin: 0;
   margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
@@ -36,7 +49,6 @@
     font-size: 60px;
     line-height: 60px;
     color: $optional-color;
-    padding-left: 90px;
   }
 }
 
@@ -49,21 +61,44 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 50px;
+    align-self: flex-start;
     font-size: 20px;
     line-height: 20px;
     color: $optional-color;
-    padding-left: 90px;
+    grid-column: 1/-1;
+    grid-row: 2/2;
+    z-index: 2;
   }
 }
 
 .promo__image {
   display: block;
-  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    grid-row: 2/4;
+    margin-top: 20px;
+    margin-left: -45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -41px;
+    margin-left: -73px;
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+  }
 }
 
 .promo__link {
   padding: 10px 64px;
-  width: 280px;
-  margin: 0 auto;
   display: block;
+
+  @media (min-width: $tablet-width) {
+    grid-area: 3/1;
+    padding: 14px 24px;
+    margin-bottom: auto;
+    margin-right: auto;
+    width: 242px;
+    text-align: center;
+  }
 }

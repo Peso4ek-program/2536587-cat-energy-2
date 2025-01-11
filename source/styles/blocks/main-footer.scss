@@ -23,7 +23,6 @@
 }
 
 .main-footer__text {
-  margin-right: auto;
   font-size: 16px;
   line-height: 20px;
   color: $base-color-text;
@@ -57,28 +56,12 @@
   }
 }
 
-.social {
-  padding: 20px 94px;
-  list-style-type: none;
-  margin: 0;
-  display: flex;
-  gap: 24px;
-  justify-self: center;
-  border-bottom: 1px solid #d9d9d9;
-  border-top: 1px solid #d9d9d9;
-
-  @media (min-width: $tablet-width) {
-    border: none;
-  }
-}
-
 .main-footer__logo-copyright {
   display: flex;
   justify-content: space-between;
-  padding: 20px 20px 40px;
+  padding: 20px 0 40px;
   align-items: center;
   text-decoration: none;
-
   fill: #666666;
 
   &:focus-visible {
@@ -106,7 +89,5 @@
 }
 
 .copyright__logo {
-  fill: #68b738;
-  width: 27px;
-  height: 34px;
+  fill: #666666;
 }

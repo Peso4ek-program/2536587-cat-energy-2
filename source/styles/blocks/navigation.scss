@@ -19,6 +19,7 @@
   display: flex;
   align-items: center;
   margin-right: auto;
+  padding-left: 20px;
 
   &:hover {
     opacity: 0.8;
@@ -30,6 +31,10 @@
 
   &:active {
     opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
   }
 }
 
@@ -48,7 +53,6 @@
 
 .main-nav__user {
   padding-top: 13px;
-  padding-left: 20px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -145,11 +149,7 @@
 .main-nav__wrapper {
   @media (min-width: $tablet-width) {
     display: flex;
-    justify-content: space-between;
-    width: 704px;
-    margin: 0 auto;
     flex-wrap: wrap;
-    flex-shrink: 0;
   }
 
   @media (min-width: $desktop-width) {
