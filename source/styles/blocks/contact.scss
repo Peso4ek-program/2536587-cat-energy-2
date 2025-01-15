@@ -1,50 +1,81 @@
-@use "../common/fonts.scss" ;
-@use "../common/variables.scss" ;
-
 .contact {
-  margin-top: 40px;
+  margin: 0 auto;
+  padding: 30px 0;
+  line-height: 20px;
+  background-color: #ffffff;
 
   @media (min-width: $tablet-width) {
-    margin-top: 60px;
+    padding: 60px 0;
+    max-width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 48.8%;
+    left: calc(50% - (1440px - 220px) / 2);
+    padding: 60px 80px;
+    width: 562px;
     background-color: #ffffff;
+    transform: translateY(-50%);
+    z-index: 2;
   }
 }
 
-.contact__wrapper {
+.contact--background {
+  @media (max-width: $tablet-width-only) {
+    background-color: #f2f2f2;
+  }
+}
+
+.contact__container {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  width: 280px;
 
   @media (min-width: $tablet-width) {
-    justify-content: space-between;
+    padding: 0 40px;
+    width: 708px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    width: auto;
   }
 }
 
 .contact__title {
-  font-family: $additional-font;
-  font-weight: $font-weight;
+  margin: 0;
+  font-family: $secondary-font;
   font-size: 16px;
-  line-height: 20px;
+  font-weight: 400;
   color: #111111;
-  text-transform: $text-transform;
+  text-transform: uppercase;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: 768px) {
     font-size: 20px;
     line-height: 26px;
-    padding: 60px 40px;
   }
 }
 
 .contact__address {
-  font-family: $primary-font;
-  font-weight: $font-weight;
   font-size: 14px;
-  line-height: 20px;
-  color: $base-color-text;
   font-style: normal;
 
   @media (min-width: $tablet-width) {
+    text-align: right;
     font-size: 16px;
     line-height: 20px;
-    padding: 60px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.contact__address-city {
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-top: 18px;
   }
 }

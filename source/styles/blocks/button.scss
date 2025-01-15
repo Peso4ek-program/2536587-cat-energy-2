@@ -1,86 +1,63 @@
-@use "../common/fonts.scss" ;
-@use "../common/variables.scss" ;
-
 .button {
-  background-color: $bg-color-green;
-  font-family: $additional-font;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-family: $secondary-font;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: $additional-color;
-  text-transform: $text-transform;
+  color: #ffffff;
+  text-transform: uppercase;
   text-decoration: none;
-  display: block;
+  background-color: $bg-basic-green;
 
-  &--products {
-    display: block;
-    padding: 10px 109px;
-    margin: 0 auto;
-
-    &:hover {
-      background-color: #5eaa2f;
-    }
-
-    &:focus-visible {
-      outline-color: $bg-color-green;
-    }
-
-    &:active {
-      color: rgba(255, 255, 255, 0.3);
-    }
-
-    @media (min-width: $tablet-width) {
-      width: 250px;
-      padding: 10px 94px;
-      margin: 32px auto 40px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 169px;
-      padding: 10px 54px;
-    }
+  &:hover {
+    background-color: #5eaa2f;
   }
 
-  &--change {
+  &:focus-visible {
+    outline-color: $bg-basic-green;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--background-color {
     background-color: #f2f2f2;
-    color: #444444;
-    padding: 10px 95px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 24px;
-
-    @media (min-width: $tablet-width) {
-      width: 250px;
-      padding: 10px 80px;
-      margin: 0 auto;
-      margin-bottom: 40px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 169px;
-      padding: 10px 39px;
-    }
   }
 
-  &--additional {
-    margin-bottom: 19px;
-
-    @media (min-width: $tablet-width) {
-      width: 100%;
-      padding: 10px 285px;
-      margin-bottom: 27px;
-    }
+  &--background-color:hover {
+    background-color: #ebebeb;
   }
 
-  &--news {
-    border: none;
-    padding: 15px 82px;
-    width: 280px;
-    margin: 0 auto;
+  &--text-color {
+    color: $color-base-text;
+  }
 
-    @media (min-width: $tablet-width) {
-      padding: 15px 70px;
-      margin: 0;
-      max-height: 56px;
+  &--text-color:active {
+    color: $color-base-text;
+  }
+
+  @media (min-width: $tablet-width) {
+    // display: inline-block;
+    padding: 14px;
+    font-size: 20px;
+    line-height: 26px;
+
+    &--margin {
+      margin-right: auto;
+      margin-bottom: auto;
+    }
+
+    &--padding {
+      padding-left: 26px;
+      padding-right: 26px;
+    }
+
+    &--grid {
+      grid-column: 1/-1;
+      grid-row: 3/4;
     }
   }
 }

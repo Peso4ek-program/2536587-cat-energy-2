@@ -1,46 +1,43 @@
-@use "../common/fonts.scss" ;
-@use "../common/variables.scss" ;
-
 .history {
-  margin-top: 25px;
+  margin: 0 auto;
   background-color: #eaeaea;
 
+
   @media (min-width: $tablet-width) {
-    margin-top: 45px;
     background-color: #ffffff;
-    background-image: linear-gradient(to bottom, #ffffff 50%, #eaeaea 50%);
+    background-image: linear-gradient(to bottom, #ffffff 621px, #eaeaea 621px);
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 69px;
-    background-image: linear-gradient(to bottom, #ffffff 50%, #eaeaea 50%);
+    background-image: linear-gradient(to bottom, #ffffff 140px, #eaeaea 140px);
   }
 }
 
-.history__wrapper {
+.history__container {
+  padding: 25px 20px;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding: 45px 30px 100px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0;
     grid-template-columns: repeat(4, 250px);
     grid-template-rows: repeat(8, auto);
-    column-gap: 79px;
-    max-width: 1240px;
+    column-gap: 76px;
+    padding: 0 0 75px;
   }
 }
 
 .history__title {
-  font-family: $additional-font;
-  font-weight: $font-weight;
-  font-size: 36px;
-  line-height: 40px;
-  color: $optional-color;
   margin: 0;
   margin-bottom: 40px;
-  padding-top: 25px;
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
 
   @media (min-width: $tablet-width) {
     grid-column: 1/-1;
@@ -56,12 +53,10 @@
 }
 
 .history__intro {
-  font-family: $primary-font;
-  font-weight: $font-weight;
+  margin: 0;
+  margin-bottom: 20px;
   font-size: 14px;
   line-height: 18px;
-  color: $base-color-text;
-  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1/-1;
@@ -73,33 +68,34 @@
   @media (min-width: $desktop-width) {
     grid-column: 1/3;
     margin-bottom: 69px;
-    padding-right: 100px;
+    padding-right: 145px;
   }
 }
 
-
 .history__list {
   margin: 0;
-  padding: 0;
-  list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     justify-content: stretch;
     gap: 43px;
-    margin-bottom: 99px;
+    margin-bottom: 100px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 1/3;
-    margin-bottom: 55px;
+    margin-bottom: 54px;
   }
 }
 
 .history__item {
-  width: 124px;
+  min-width: 125px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   @media (min-width: $tablet-width) {
     width: 162px;
@@ -107,15 +103,14 @@
 }
 
 .history__number {
-  font-family: $additional-font;
-  font-weight: $font-weight;
-  font-size: 24px;
-  line-height: 24px;
-  color: $optional-color;
-  text-transform: $text-transform;
   padding-top: 15px;
   padding-bottom: 17px;
   text-align: center;
+  text-transform: uppercase;
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 24px;
+  color: #000000;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
 
@@ -125,16 +120,12 @@
   }
 }
 
-
 .history__description {
-  font-family: $primary-font;
-  font-weight: $font-weight;
+  margin-top: -11px;
+  margin-left: 20px;
+  width: 80px;
   font-size: 12px;
   line-height: 12px;
-  color: $base-color-text;
-  margin-top: -12px;
-  margin-left: 20px;
-  width: 85px;
   text-align: center;
   background-color: #eaeaea;
 
@@ -146,49 +137,39 @@
     line-height: 14px;
     background-color: #ffffff;
   }
+
+  @media (min-width: $desktop-width) {
+    background-color: #eaeaea;
+  }
 }
 
 .history__cost {
   margin: 0;
   text-align: center;
-  font-family: $additional-font;
-  font-weight: $font-weight;
-  font-size: 20px;
+  font-family: $secondary-font;
+  font-size: 14px;
   line-height: 20px;
-  color: $optional-color;
-  text-transform: $text-transform;
-  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #000000;
 
   @media (min-width: $tablet-width) {
-    align-self: center;
+    margin-top: 10px;
     margin-left: auto;
-    margin-bottom: 99px;
-    width: 174px;
+    margin-bottom: auto;
+    width: 190px;
     font-size: 20px;
+    line-height: 24px;
     text-align: right;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 1/3;
-    margin-left: 0;
-    margin-bottom: 0;
+    margin: 0;
     text-align: left;
     width: 600px;
 
     & > span {
-      margin-left: 70px;
+      margin-left: 60px;
     }
-  }
-}
-
-.slider {
-  @media (min-width: $tablet-width) {
-    grid-column: 1/-1;
-    justify-self: center;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-column: 3/-1;
-    grid-row: 1/-1;
   }
 }

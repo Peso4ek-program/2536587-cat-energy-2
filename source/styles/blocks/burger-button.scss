@@ -1,0 +1,44 @@
+.burger-button {
+  margin: 0;
+  padding: 0;
+  width: 26px;
+  border: 1px solid #000000;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+
+  &--hide {
+    display: none;
+  }
+
+  &--show {
+    border: none;
+  }
+
+  &::before {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    content: "";
+    width: 24px;
+    border: 1px solid #000000;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 35%;
+    left: 0;
+    content: "";
+    width: 24px;
+    border: 1px solid #000000;
+    transform: translateY(-50%);
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  &--show::before {
+    transform: translateY(5px) rotate(-405deg);
+  }
+
+  &--show::after {
+    transform: translateY(-4px) rotate(405deg);
+  }
+}

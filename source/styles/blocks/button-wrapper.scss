@@ -1,0 +1,10 @@
+.button-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 18px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

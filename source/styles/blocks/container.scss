@@ -1,0 +1,20 @@
+.container {
+  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    width: 1220px;
+
+    &--background {
+      background-image: linear-gradient(to right, #ffffff 50%, rgba(104, 183, 56, 0.85) 50%), url("../../images/index-images/index-desktop/background-desktop@2x.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 100%;
+    }
+  }
+}

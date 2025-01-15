@@ -1,18 +1,56 @@
-@use "../common/fonts.scss" ;
-@use "../common/variables.scss" ;
-
 .slider {
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3/-1;
+    grid-row: 1/-1;
+    max-height: 512px;
+  }
 }
 
 .slider__list {
+  position: relative;
+  display: grid;
+  grid-template-columns: 280px;
+  margin: 0;
+  padding-left: 0;
   list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 560px;
+  }
+}
+
+.slider__item {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+
+  &--before {
+    position: absolute;
+    width: 50%;
+    z-index: 10;
+    overflow: hidden;
+    background-image: linear-gradient(#ffffff 0%, #eaeaea 0%);
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(#ffffff 153px, #eaeaea 153px);
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: linear-gradient(#ffffff 140px, #eaeaea 140px);
+    }
+  }
 }
 
 .slider__button {
   position: absolute;
-  top: 0;
-  left: 50%;
+  top: 2px;
+  left: 49%;
   padding: 0;
   width: 4px;
   background-color: #666666;
@@ -20,31 +58,32 @@
   border-radius: 2px;
   height: 100%;
   box-sizing: border-box;
+  z-index: 20;
 
   &:hover {
-    background-color: $bg-color-green;
+    background-color: $bg-basic-green;
   }
 
   &:focus-visible {
-    outline-color: $bg-color-green;
+    outline-color: $bg-basic-green;
   }
 
   &:active {
     background-color: #5eaa2f;
-    opacity: 0, 6;
+    opacity: 0.6;
   }
 
   &:hover::before {
-    border-color: $bg-color-green;
+    border-color: $bg-basic-green;
   }
 
   &:focus-visible::before {
-    border-color: $bg-color-green;
+    border-color: $bg-basic-green;
   }
 
   &::before {
     content: "";
-    background-color: $additional-color;
+    background-color: #ffffff;
     border: 2px solid #666666;
     border-radius: 50%;
     width: 40px;
@@ -56,7 +95,7 @@
   }
 
   &:hover::after {
-    background-color: $bg-color-green;
+    background-color: $bg-basic-green;
   }
 
   &::after {
@@ -70,5 +109,9 @@
     transform: translate(-50%, -50%);
     mask-image: url("../../icons/stack.svg#slider-arrow");
     mask-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    left: 49.5%;
   }
 }

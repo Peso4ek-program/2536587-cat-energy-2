@@ -1,15 +1,15 @@
 /* в этот файл добавляет скрипты*/
-const navMain = document.querySelector('.main-nav__user');
-const navToggle = document.querySelector('.main-nav__toggle');
+const buttonWrapper = document.querySelector('.button-wrapper');
+const burgerButton = document.querySelector('.burger-button');
+const navigationList = document.querySelector('.navigation__list');
 
-navMain.classList.remove('main-nav__user--nojs');
+if(navigationList.classList[1] === 'navigation__list--show') {
+  navigationList.classList.remove('navigation__list--show');
+  burgerButton.classList.remove('burger-button--hide');
+}
 
-navToggle.addEventListener('click', () => {
-  if (navMain.classList.contains('main-nav__user--closed')) {
-    navMain.classList.remove('main-nav__user--closed');
-    navMain.classList.add('main-nav__user--opened');
-  } else {
-    navMain.classList.add('main-nav__user--closed');
-    navMain.classList.remove('main-nav__user--opened');
-  }
+buttonWrapper.addEventListener('click', () => {
+
+  burgerButton.classList.toggle('burger-button--show');
+  navigationList.classList.toggle('navigation__list--show');
 });

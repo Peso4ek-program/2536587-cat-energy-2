@@ -1,16 +1,18 @@
-@use "../common/fonts.scss" ;
-@use "../common/variables.scss" ;
-
 .main-footer {
+  margin: 0 auto;
   padding: 40px 0;
   background-color: #f2f2f2;
 
   @media (min-width: $tablet-width) {
-    padding: 55px 0;
+    padding: 60px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 68px 0;
   }
 }
 
-.main-footer__wrapper {
+.main-footer__container {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
@@ -19,13 +21,21 @@
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto;
+    width: 708px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
   }
 }
 
 .main-footer__text {
+  margin: 0;
+  margin-right: auto;
   font-size: 16px;
   line-height: 20px;
-  color: $base-color-text;
+  color: #444444;
 
   @media (min-width: $tablet-width) {
     margin-right: 23px;
@@ -34,7 +44,7 @@
 
 .main-footer__logo {
   justify-self: center;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 
   &:hover {
     opacity: 0.8;
@@ -42,7 +52,7 @@
 
   &:focus-visible {
     opacity: 0.8;
-    outline-color: $bg-color-green;
+    outline-color: $bg-basic-green;
   }
 
   &:active {
@@ -50,26 +60,28 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 0;
     grid-column: 1/2;
     place-self: center left;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
 .main-footer__logo-copyright {
   display: flex;
-  justify-content: space-between;
-  padding: 20px 0 40px;
+  justify-self: center;
+  margin-top: 20px;
   align-items: center;
   text-decoration: none;
   fill: #666666;
+  min-width: 280px;
 
   &:focus-visible {
-    outline-color: $bg-color-green;
+    outline-color: $bg-basic-green;
   }
 
   &:hover svg {
-    fill: $bg-color-green;
+    fill: $bg-basic-green;
   }
 
   &:active svg {
@@ -81,13 +93,10 @@
   }
 
   @media (min-width: $tablet-width) {
+    margin-top: 0;
     padding: 0;
     min-width: auto;
     grid-column: 3/4;
     justify-self: flex-end;
   }
-}
-
-.copyright__logo {
-  fill: #666666;
 }

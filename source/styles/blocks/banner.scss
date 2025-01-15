@@ -1,47 +1,64 @@
-@use "../common/fonts.scss" ;
-@use "../common/variables.scss" ;
-
-
-.banner__wrapper {
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, #ffffff 0%), url("../../images/catalog-images/catalog-desktop/catalog-background-desktop@2x.jpg");
-  background-repeat: no-repeat;
-  background-position: 90%;
-  background-size: contain;
-  margin-top: 35px;
-  min-height: 290px;
-
-  @media (min-width: $tablet-width) {
-    margin-top: 70px;
-    background-position: 60%;
-    background-size: cover;
-  }
-}
-
-.banner__title {
+.banner {
   position: relative;
-  font-family: $primary-font;
-  font-weight: $font-weight;
-  color: #ffffff;
-  text-align: center;
-  width: 161px;
-  min-height: 60px;
-  font-size: 16px;
-  line-height: 20px;
-  margin: 0 auto;
+  padding: 65px 55px 20px;
+  min-height: 290px;
+  background-color: rgba(104, 183, 56, 0.85);
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, #ffffff 0%), image-set("../../images/catalog-images/catalog-mobile/catalog-background-mobile@1x.webp" 1x type("image/webp"), "../../images/catalog-images/catalog-mobile/catalog-background-mobile@2x.webp" 2x type("image/webp"), "../../images/catalog-images/catalog-mobile/catalog-background-mobile@1x.png" 1x type("image/jpg"), "../../images/catalog-images/catalog-mobile/catalog-background-mobile@2x.png" 2x type("image/jpg"));
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &::before {
     content: "";
     display: block;
+    margin: 0 auto 50px;
     width: 78px;
     height: 81px;
     background-color: #ffffff;
     mask-image: url("../../icons/stack.svg#gift-icon");
     mask-repeat: no-repeat;
-    margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+      margin-left: 44px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0 auto;
+    }
   }
 
   @media (min-width: $tablet-width) {
     display: flex;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
     justify-content: space-between;
+    align-items: center;
+    padding: 10px 35px;
+    min-height: 200px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, #ffffff 0%), image-set("../../images/catalog-images/catalog-tablet/catalog-background-tablet@1x.webp" 1x type("image/webp"), "../../images/catalog-images/catalog-tablet/catalog-background-tablet@2x.webp" 2x type("image/webp"), "../../images/catalog-images/catalog-tablet/catalog-background-tablet@1x.png" 1x type("image/jpg"), "../../images/catalog-images/catalog-tablet/catalog-background-tablet@2x.png" 2x type("image/jpg"));
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 55px 35px 50px;
+    flex-direction: column;
+  }
+}
+
+.banner__title {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    width: 161px;
+    margin-right: 90px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: auto;
   }
 }

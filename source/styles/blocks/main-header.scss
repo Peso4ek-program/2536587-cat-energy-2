@@ -1,9 +1,26 @@
-@use "../common/fonts.scss" ;
-@use "../common/variables.scss" ;
-
-
 .main-header {
-  display: flex;
-  flex-direction: column;
-}
+  margin: 0 auto;
+  width: 320px;
+  background-color: #393a3e;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85) 55%, #ffffff 55%), image-set("../../images/index-images/index-mobile/background-mobile@1x.webp" 1x type("image/webp"), "../../images/index-images/index-mobile/background-mobile@2x.webp" 2x type("image/webp"), "../../images/index-images/index-mobile/background-mobile@1x.jpg" 1x type("image/jpg"), "../../images/index-images/index-mobile/background-mobile@2x.jpg" 2x type("image/jpg")), linear-gradient(#ffffff 0%, #393a3e 0%);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top 66px left;
 
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    background-color: #ffffff;
+    background-image: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    min-height: 694px;
+    background-color: $bg-basic-green;
+    background-image: linear-gradient(to right, #ffffff 50%, rgba(104, 183, 56, 0.85) 50%), image-set("../../images/index-images/index-desktop/background-desktop@1x.webp" 1x type("image/webp"), "../../images/index-images/index-desktop/background-desktop@2x.webp" 2x type("image/webp"), "../../images/index-images/index-desktop/background-desktop@1x.jpg" 1x type("image/jpg"), "../../images/index-images/index-desktop/background-desktop@2x.jpg" 2x type("image/jpg")), linear-gradient(to right, #ffffff 50%, #393a3e 50%);
+    background-size: 100%, 1042px 694px;
+    background-repeat: no-repeat;
+    background-position: bottom, calc(50vw) center;
+  }
+}

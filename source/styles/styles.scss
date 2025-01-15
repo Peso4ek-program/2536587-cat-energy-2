@@ -5,15 +5,15 @@
 @import "./common/global.scss";
 
 /* BLOCKS */
-@import "./blocks/page.scss";
+@import "./blocks/container.scss";
 @import "./blocks/button.scss";
-@import "./blocks/wrapper.scss";
-@import "./blocks/logo-image.scss";
+@import "./blocks/burger-button.scss";
+@import "./blocks/button-wrapper.scss";
+@import "./blocks/button-show-more.scss";
 @import "./blocks/main-header.scss";
 @import "./blocks/navigation.scss";
-@import "./blocks/site-list.scss";
 @import "./blocks/promo.scss";
-@import "./blocks/main-container.scss";
+@import "./blocks/input-text.scss";
 @import "./blocks/programs.scss";
 @import "./blocks/feature.scss";
 @import "./blocks/about-product.scss";
@@ -23,9 +23,9 @@
 @import "./blocks/map.scss";
 @import "./blocks/main-footer.scss";
 @import "./blocks/social.scss";
-@import "./blocks/footer-logo.scss";
 // Catalog
 @import "./blocks/catalog.scss";
+@import "./blocks/catalog-header.scss";
 @import "./blocks/additional-products.scss";
 @import "./blocks/banner.scss";
 @import "./blocks/subscribe.scss";
