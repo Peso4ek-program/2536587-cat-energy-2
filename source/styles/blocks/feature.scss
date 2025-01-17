@@ -190,6 +190,12 @@
     }
   }
 
+  &:hover::after {
+    right: -9;
+    width: 32px;
+    background-image: url("../../icons/icon-arrow-long.svg");
+  }
+
   &:active {
     opacity: 0.3;
   }
